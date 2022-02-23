@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+ <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Site Properties -->
+  <link rel="stylesheet" href="css/aurora-pack.min.css">
+  <link rel="stylesheet" href="css/aurora-theme-base.min.css">
+  <link rel="stylesheet" href="css/urku.css">
+    
+  <title>ICONUP - METHODS</title>
+
+  
+  <body class="top">
+    <header class="ae-container-fluid ae-container-fluid--full rk-header ">
+      <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid rk-topbar">
+        <h1 class="rk-logo"><a href="index.html">ICONUP</a></h1>
+        <nav class="rk-navigation">
+          <ul class="rk-menu">
+            <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+            </li>
+            <li class="rk-menu__item"><a href="introduction.html" class="rk-menu__link">Introduction</a>
+            </li>
+            <li class="active rk-menu__item"><a href="methods.html" class="rk-menu__link">Methods</a>
+            </li>
+            <li class="rk-menu__item"><a href="#0" class="rk-menu__link">Results and Discussion</a>
+              <nav class="rk-menu__sub">
+                <ul class="rk-container">
+                  <li class="rk-menu__item"><a href="validation.html" class="rk-menu__link">Validation</a></li>
+                  <li class="rk-menu__item"><a href="application.html" class="rk-menu__link">Application</a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="rk-menu__item"><a href="conclusion.html" class="rk-menu__link">Conclusion and Acknowledgement</a>
+            </li>
+            <li class="rk-menu__item"><a href="references.html" class="rk-menu__link">References</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="ae-container-fluid rk-main">
+      <div class="rk-layout-ctrl-mobile">
+        <svg viewBox="0 0 9 9" class="layout-mob-1">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-2">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-3">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-4">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+      </div>
+      <header class="rk-portfolio-cover  item-inside-1">
+        <div class="item-inside__meta">
+          <h1 class="ae-u-bolder rk-portfolio-title ">Methods</h1>
+        </div>
+      </header>
+      <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
+        <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
+			  <h4 class="ae-u-bolder">Proportionality Measure</h4>
+				<h5>The methodology implements the goodness of fit to proportionality measure, which is calculated as follows for a given pair of variables, A and B:</h5>          
+          </div>
+          <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="img/proportionality_equations.png" alt="ICONUP"></div>
+          <div class="ae-grid__item item-lg-12 au-lg-ptp-1">
+			  <h4 class="ae-u-bolder">General Description of the Methodology</h4>
+            <h5>This measurement (phi-value) is used to detect any significantly co-occurring interactions. Edge attributes are theoretical average p-values calculated using a hypothesis test of subsampled phi values with a null distribution generated using bootstrapping of randomly permuted data. The null hypothesis is that there is no significant difference between subsampled phi value and the randomly permuted phi values. Thus, the significant (low) p-value for an interaction represents that the interaction has statistically sufficient evidence to reject that it is not different from a random interaction.</h5>
+            <h5 class="au-lg-ptp-1">A general workflow for an inference of a co-occurrence network is described in Figure 1. The methodology accepts a table of microbial abundance data as an input. The table can have OTUs as columns and samples as rows or vice versa. The method was written in Python and Theano variables were used for computation on graphical processing unit (GPU) (Bergstra <i>et al.</i>, 2010). The method implemented the following python packages: os, sys and argparse, re, json, networkx, pandas, numpy, and statsmodels.sandbox (Schult and Swart,
+2008; McKinney, 2010; Van Der Walt <i>et al.</i>, 2011; Seabold and Perktold, 2010).
+The methodology is further described in Supplementary Methods.
+</h5>
+          </div>
+		<div class="ae-grid ae-grid--collapse">
+          <div class="ae-grid__item item-lg--auto item-1 au-lg-ptp-1"><img src="img/methodology_final.png" alt="ICONUP"></div>
+          <p>Figure 1. A workflow of co-occurrence network inference. Input tables should contain abundance values. Samples with only zeros are removed because proportionality has log in its equation and log of zero is undefined. A. The analysis works on a pair of OTUs. B. Samples with zeros are excluded for subsampling (sampling without replacement), and the number of all the nonzero samples, a constant X, is measured. X-1 nonzero samples (columns) are sampled. C. Proportionality value is calculated using the subsampled data table. B and C are repeated for n, number of sampling iterations, times. D. The data table from A is randomly permuted. The permutation is done for each OTUs separately. E. Samples with zeros are excluded for bootstrapping (sampling with replacement), X-1 nonzero samples are sampled with replacement). F. Proportionality value is calculated using the bootstrapped data table. D, E, and F are repeated for n times. G. n number of proportionality measures from subsampling makes a list. H. n number of porportinality measures from bootstrapping forms a null distribution. I. n number of p-values are calculated by comparing each value of proportionality measures from the list with the null distribution. Multiple testing correction of the p-values calculated is done using false discovery rate (FDR) estimation. J. An average of the adjusted p-values is used as an edge attribute for the pair of OTUs. All the steps are repeated for all the possible pairs of OTUs to infer a co-occurrence network.</p>
+        </div>
+	</div>
+	<div class="ae-grid__item item-lg-12 au-lg-ptp-1">
+		<h4 class="ae-u-bolder">Validation of the Methodology</h4>
+				<h5>The proportionality method was applied to simulated data sets and ecological datasets from Weiss <i>et al.</i> for comparison with the other inference techniques. Weiss and colleague generated the simulated datasets using Copula models. Of those simulated datasets, raw abundance dataset and rarefied dataset of the raw abundance dataset were used for this research. Each set of data has five data tables with variations in n<sub><i>eff</i></sub>, a diversity index representing the number of effective entities in the dataset calculated by Inverse Simpson (Table 1) (Weiss <i>et al.</i>, 2016). Also, each data table has 80 samples with 524 OTUs. The raw abundance datasets have absolute abundances. The networks for the raw abundance datasets were inferred with alpha value of 0.001 and 100 sampling iterations. The rarefied datasets are subsamples of raw abundance datasets with a constraint on the total number of counts, 2000, per sample. For the rarefied datasets, 0.001 alpha value was used for the network inference, while the number of sampling was 50. The ecological datasets contain various types of interactions such as mutual, commensal, parasitic, and competitive interactions. Five ecological data tables were used in this study, and their characteristics are summarized in Table 1. 0.001 alpha value and 100 sampling iterations were used for the network inference.</h5>
+  
+  <link rel="stylesheet" type="text/css" href="components/reset.css">
+  <link rel="stylesheet" type="text/css" href="components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="components/container.css">
+  <link rel="stylesheet" type="text/css" href="components/divider.css">
+  <link rel="stylesheet" type="text/css" href="components/grid.css">
+
+  <link rel="stylesheet" type="text/css" href="components/header.css">
+  <link rel="stylesheet" type="text/css" href="components/segment.css">
+  <link rel="stylesheet" type="text/css" href="components/table.css">
+  <link rel="stylesheet" type="text/css" href="components/icon.css">
+  <link rel="stylesheet" type="text/css" href="components/menu.css">
+  <link rel="stylesheet" type="text/css" href="components/message.css">
+<style type="text/css">
+  h2 {
+    margin: 2em 0em;
+  }
+  .ui.container {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+  </style>
+  
+  <div class="ui section divider"></div>
+  <div class="ui top attached inverted segment">
+    Table 1. Datasets used in the study. Tables 6 and 7 were ecological tables, having competitive, mutual, commensal, amensal, parasitic, obligate, and partial oligate syntrophic relationships of various strengths (2, 3, and 5) as well as two-species (OTU1 acts on OTU2) and three-species (OTU1 and OTU2 together act on OTU3) interactions. Tables 16-18 were again ecological tables, except with one-dimensional linear relationships only.  The values were relative abundance, 50% sparsity, and relative abundance of the 50% sparsity table relatively.  
+  </div>
+
+  <table class="ui attached inverted table">
+    <thead>
+      <th>Table Number</th>
+      <th>Number of Samples</th>
+      <th>Number of OTUs</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>4s</td>
+        <td>80</td>
+        <td>524</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>50</td>
+        <td>1230</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>50</td>
+        <td>1280</td>
+      </tr>
+      <tr>
+        <td>16,17,18</td>
+        <td>50</td>
+        <td>720</td>
+      </tr>
+    </tbody>
+  </table>
+    <link rel="stylesheet" href="css/aurora-pack.min.css">
+  <link rel="stylesheet" href="css/aurora-theme-base.min.css">
+  <link rel="stylesheet" href="css/urku.css">
+    
+  
+		<h4 class="ae-u-bolder au-lg-ptp-1">Application using Stroke case-control study</h4>
+				<h5>The proportionality method was applied to datasets from a stroke case-control study of dysbiosis in gut microbiome (Yin <i>et al.</i>, 2015). Abundance datasets of 98 healthy control and of 173 stroke (or transient ischemic attack) patients were acquired from EBI metagenomics database. Bacterial DNA was obtained from the fecal samples. The network inference was done at genus level with 0.05 alpha value and variations in the number of sampling iterations. </h5>
+          </div>
+
+      <div class="ae-container-fluid au-pt-4 au-pb-4">
+        <div class="group-buttons"><a href="validation.html" class="au-mt-2 arrow-button arrow-button--right">Next: Results and Discussion - Validation<span class="arrow-cont">
+              <svg>
+                <use xlink:href="img/symbols.svg#arrow"></use>
+              </svg></span></a></div>
+      </div>
+    </section>
+    <footer class="ae-container-fluid rk-footer ">
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+          <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">yk1615@ic.ac.uk </a></span></p>
+          <p class="rk-footer__text rk-footer__by"><span class="ae-u-bolder">Yunsoo Kim, June 2016<span></p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+  </body>
+</html>

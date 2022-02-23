@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+ <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Site Properties -->
+  <link rel="stylesheet" href="css/aurora-pack.min.css">
+  <link rel="stylesheet" href="css/aurora-theme-base.min.css">
+  <link rel="stylesheet" href="css/urku.css">
+    
+  <title>ICONUP - VALIDATION</title>
+
+  
+  <body class="top">
+    <header class="ae-container-fluid ae-container-fluid--full rk-header ">
+      <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid rk-topbar">
+        <h1 class="rk-logo"><a href="index.html">ICONUP</a></h1>
+        <nav class="rk-navigation">
+          <ul class="rk-menu">
+            <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+            </li>
+            <li class="rk-menu__item"><a href="introduction.html" class="rk-menu__link">Introduction</a>
+            </li>
+            <li class="rk-menu__item"><a href="methods.html" class="rk-menu__link">Methods</a>
+            </li>
+            <li class="active rk-menu__item"><a href="#0" class="rk-menu__link">Results and Discussion</a>
+              <nav class="rk-menu__sub">
+                <ul class="rk-container">
+                  <li class="active rk-menu__item"><a href="validation.html" class="rk-menu__link">Validation</a></li>
+                  <li class="rk-menu__item"><a href="application.html" class="rk-menu__link">Application</a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="rk-menu__item"><a href="conclusion.html" class="rk-menu__link">Conclusion and Acknowledgement</a>
+            </li>
+            <li class="rk-menu__item"><a href="references.html" class="rk-menu__link">References</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="ae-container-fluid rk-main">
+      <div class="rk-layout-ctrl-mobile">
+        <svg viewBox="0 0 9 9" class="layout-mob-1">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-2">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-3">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-4">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+      </div>
+      <header class="rk-portfolio-cover  item-inside-1">
+        <div class="item-inside__meta">
+          <h1 class="ae-u-bolder rk-portfolio-title ">Results and Discussion - Validation</h1>
+        </div>
+      </header>
+      <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
+        <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+			<div class="ae-grid__item item-lg-12 au-lg-ptp-1">
+				<h5>Weiss <i>et al.</i> compared several network inference methods for metagenomics abundance data sets: CoNet, RMT, MIC, LSA, SparCC, Pearson Correlation, Spearman Correlation, and Bray-Curtis (Faust <i>et al.</i>., 2012; Deng <i>et al.</i>., 2012; Ruan <i>et al.</i>., 2006; Xia <i>et al.</i>., 2013; Reshef <i>et al.</i>., 2011; Friedman and Alm, 2012; Pearson, 1909; Spearman, 1904; Bray and Curtis, 1957). They used simulated data sets as well as ecological data sets to compare these methods. Thus, our methodology was also applied to some of those data sets and the resulting networks were compared with the networks inferred by the other inference methods.</h5>          
+			</div>
+        </div>  
+	    <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+			<div class="ae-grid__item item-lg-12 au-lg-ptp-1">
+			  <h4 class="ae-u-bolder">Raw Absolute Abundance Data</h4>
+		<div class="ae-grid__item item-lg--auto item-1"><img src="img/abundance_final2.png" alt="ICONUP"></div>
+			<p>Figure 2. Coverage comparison of networks inferred by the methods on absolute abundance datasets from Weiss <i>et al.</i> with variations in n<sub><i>eff</i></sub>. N<sub><i>eff</i></sub> values are diversity index calculated using inverse Simpson and represent the number of effective (i.e. overly abundant) OTUs in the dataset. This Figure is adapted from Weiss <i>et al.</i> (Supplementary Fig. 5). The final column has been added for comparison. Blue and pink lines represent significant edges with positive and negative associations, respectively. Grey circle represents mean abundance of the network, which the proportionality method did not calculate. For the last column, the networks are visualized using Cytoscape 3.11 in circular layout (Shannon <i>et al.</i>, 2003). The circular layout from Cytoscape visualizes each network with its own orientation to form an ideal circle. P-value threshold was set to 0.001 for all the tools except for RMT and CoNet. Number of iterations for the proportionality method was 100 iterations. </p>		
+				<h5 class = "au-lg-ptp-1">Using the simulated datasets with variations in diversity index, the effect of normalization and densities of the inferred networks are analyzed. Fig. 2 shows networks inferred using the absolute abundance datasets from Weiss <i>et al.</i>. Just like all the other inference methods, the proportionality method inferred a similar number of edges regardless of the variations in diversity index (n<sub><i>eff</i></sub>, which represents number of effective species in the dataset; low n<sub><i>eff</i></sub> indicates compositionality is likely to be high) (Fig. 2). In fact, the network inferred using the proportionality method was less dense than the networks inferred by most techniques (Fig. 2). LSA, Bray Curtis, and MIC had less dense networks inferred than the proportionality method. This indicates that the proportionality method can perform adequately well for absolute data when compared to the preexisting network inference techniques. However, microbiome abundance data are never absolute data because the data are obtained from microbial sequences and the total abundance count is limited by the number of sequences. Thus, microbiome abundance values are relative and compositional data, for which the previous studies suggested correlation techniques, such as Pearson and Spearman correlation, do not perform well (Lovell <i>et al.</i>, 2015).</h5>
+			</div>
+		</div>
+	    <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+			<div class="ae-grid__item item-lg-12 au-lg-ptp-1">		
+			  <h4 class="ae-u-bolder">Rarefied Data</h4>
+			  
+			  <div class="ae-grid__item item-lg--auto item-1"><img src="img/rarefied_final2.png" alt="ICONUP"></div>
+			<p>Figure 3. Coverage comparison of networks inferred by each methods on rarefied abundance datasets from Weiss <i>et al.</i> with decreasing n<sub><i>eff</i></sub>. n<sub><i>eff</i></sub> is calculated using Inverse Simpson. The dataset is the subsample of the raw abundance dataset with a constraint in the total number of counts as 2000. This Figure is also adapted from Weiss <i>et al.</i> (Supplementary Fig. 6). The last column has been added for comparison. The same color assignments from Fig. 2 are used to represent significant edges and mean abundance of the network. For the last column, Cytoscape 3.11 is used for the visualization of the networks in circular layout. The circular layout generates a random (specific) orientation for each network. P-value threshold was set to 0.001 for all the tools except for RMT and CoNet. Number of iterations for the proportionality method was 50 iterations.
+            </p>
+	
+		
+					<h5 class = "au-lg-ptp-1">To test the performance of techniques with a compositional dataset, Weiss and colleague used rarefication to introduce compositional effects to the raw absolute abundance data set. Rarefication is a normalization technique that is used to introduce total sums per sample, making the data compositional, and to make the data more sparse by reducing number of OTUs from subsampling. For the rarefied datasets, the variations in diversity index significantly affected the number of edges for most of the techniques (Fig. 3). In general, datasets with lower diversity index had fewer interactions inferred. LSA, SparCC, Pearson, and Spearman were the exceptions as they did not have a decrease in the number of edges inferred. A possible explanation for the very low coverage of the proportionality method inferred networks is the sparsity of the datasets that was introduced by rarefication and a decrease in the number of effective OTUs. In fact, rarefied data tables with lower n<sub><i>eff</i></sub> had more zeros when compared to those with higher n<sub><i>eff</i></sub>. As the proportionality method discards zeros for the calculation, the proportionality method did not perform well with the zero-rich dataset. Also, although some techniques inferred more edges than the proportionality method did for the rarefied dataset, the edges inferred can include false positives.
+					</h5>
+			</div>
+		</div>
+		<div class="ae-grid__item item-lg-12 au-lg-ptp-1">
+			<h4 class="ae-u-bolder">Sensitivity, Specificity, and Precision</h4>
+				<h5>Thus, sensitivity, specificity, and precision, which are calculated using true positive, true negative, false positive, and false negative, were analyzed as a validation of the methodology (Table 2, 3, 4, 5, and 6). All of the datasets used for the analysis incorporate associations representing ecological interactions. The differences in the datasets used are as follows: various types of ecological relationships including three species interactions (Table 2 and 3), simpler one dimensional relationships (Table 4), sparse data (Table 5), and compositional and sparse data (Table 6). The datasets for Table 2, 3, and 4 have 40% of sparsity, while the datasets for Table 5 and 6 have 70% sparsity. Weiss <i>et al.</i> reported that all the inference methods performed reasonably well in specificity, but not so well in sensitivity. Also, sparsity was found to have a very significant effect on precision and sensitivity. On average without the results from the proportionality method, 40% sparsity datasets resulted in 0.25 precision and 0.22 sensitivity, but these average precision and sensitivity values decreased to 0.01 and 0.03 respectively for the 70% datasets. The proportionality method resulted in much higher precision values (0.907, 0.724, and 0.608) for the 40% sparse data tables than the average precision value. It also had relatively good sensitivity values (0.259, 0.181, 0.281) when compared with the mean sensitivity value. However, when sparsity was added to the data, proportionality method performed very poorly (0.000) for both precision and sensitivity. Still, it outperforms most of the inference techniques. As all the data tables have sample sizes of 50, 70% sparsity would mean that the proportionality method would discard at least 35 samples, 70% of the data. This loss of data due to zero-rich characteristic of the dataset limits the performance of the proportionality. Thus, the proportionality method performs well for a data set with low sparsity. It has high precision, so most of the significant edges that it successfully detects are truly significant. It has good specificity, so the insignificant interactions that it excludes for the network inference are correctly excluded. It has a modest performance for sensitivity, so it can fail to detect some significant edges for the network inference. In short, the proportionality method is somewhat sensitive, but very precise and very specific.</h5>
+		</div>
+  <link rel="stylesheet" type="text/css" href="components/reset.css">
+  <link rel="stylesheet" type="text/css" href="components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="components/container.css">
+  <link rel="stylesheet" type="text/css" href="components/divider.css">
+  <link rel="stylesheet" type="text/css" href="components/grid.css">
+
+  <link rel="stylesheet" type="text/css" href="components/header.css">
+  <link rel="stylesheet" type="text/css" href="components/segment.css">
+  <link rel="stylesheet" type="text/css" href="components/table.css">
+  <link rel="stylesheet" type="text/css" href="components/icon.css">
+  <link rel="stylesheet" type="text/css" href="components/menu.css">
+  <link rel="stylesheet" type="text/css" href="components/message.css">
+<style type="text/css">
+  h2 {
+    margin: 2em 0em;
+  }
+  .ui.container {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+  </style>
+  
+    <div class="ui section divider"></div>
+  <div class="ui top attached inverted segment">
+    Table 2. Performance on first ecological dataset of complex and various ecological relationships. f1 score is harmonic mean of precision and sensitivity. The table is adapted from Weiss <i>et al.</i> Row for the proportionality method has been added in the order of f1 value. Sensitivity is calculated by TP/(TP+FN). Specificity is calculated using TN/(TN+FP). Precision is calculated by TP/(TP+FP).
+  </div>
+
+  <table class="ui attached inverted table">
+    <thead>
+      <th>Methods</th>
+      <th>Sensitivity</th>
+      <th>Specificity</th>
+      <th>Precision</th>
+      <th>TP</th>
+      <th>FP</th>
+      <th>TN</th>
+	  <th>FN</th>
+      <th>f1</th>
+    </thead>
+    <tbody>
+<tr>
+<td>Proportionality</td>
+<td>0.259</td>
+<td>0.999</td>
+<td>0.907</td>
+<td>264</td>
+<td>27</td>
+<td>754059</td>
+<td>756</td>
+<td>0.403</td>
+</tr>
+<tr>
+<td>LSA</td>
+<td>0.280</td>
+<td>1.000</td>
+<td>0.586</td>
+<td>286</td>
+<td>202</td>
+<td>754613</td>
+<td>734</td>
+<td>0.379</td>
+</tr>
+<tr>
+<td>Spearman</td>
+<td>0.299</td>
+<td>0.999</td>
+<td>0.246</td>
+<td>305</td>
+<td>936</td>
+<td>753879</td>
+<td>715</td>
+<td>0.270</td>
+</tr>
+<tr>
+<td>MIC</td>
+<td>0.166</td>
+<td>1.000</td>
+<td>0.725</td>
+<td>169</td>
+<td>64</td>
+<td>754751</td>
+<td>851</td>
+<td>0.270</td>
+</tr>
+<tr>
+<td>SparCC</td>
+<td>0.337</td>
+<td>0.998</td>
+<td>0.202</td>
+<td>344</td>
+<td>1359</td>
+<td>753456</td>
+<td>676</td>
+<td>0.253</td>
+</tr>
+<tr>
+<td>Bray-Curtis</td>
+<td>0.106</td>
+<td>0.999</td>
+<td>0.177</td>
+<td>108</td>
+<td>502</td>
+<td>754313</td>
+<td>912</td>
+<td>0.133</td>
+</tr>
+<tr>
+<td>CoNET</td>
+<td>0.086</td>
+<td>0.998</td>
+<td>0.050</td>
+<td>88</td>
+<td>1655</td>
+<td>753160</td>
+<td>932</td>
+<td>0.064</td>
+</tr>
+<tr>
+<td>RMT</td>
+<td>0.039</td>
+<td>1.000</td>
+<td>0.129</td>
+<td>40</td>
+<td>270</td>
+<td>754545</td>
+<td>980</td>
+<td>0.060</td>
+</tr>
+<tr>
+<td>Pearson</td>
+<td>0.246</td>
+<td>0.973</td>
+<td>0.012</td>
+<td>251</td>
+<td>20368</td>
+<td>734447</td>
+<td>769</td>
+<td>0.023</td>
+</tr>
+    </tbody>
+  </table>
+  
+  <div class="ui section divider"></div>
+  <div class="ui top attached inverted segment">
+Table 3. Performance on second ecological dataset of complex and various ecological relationships. The table is adapted from Weiss <i>et al.</i> Row for the proportionality method has been added in the order of f1 value.  </div>
+
+  <table class="ui attached inverted table">
+    <thead>
+      <th>Methods</th>
+      <th>Sensitivity</th>
+      <th>Specificity</th>
+      <th>Precision</th>
+      <th>TP</th>
+      <th>FP</th>
+      <th>TN</th>
+	  <th>FN</th>
+      <th>f1</th>
+    </thead>
+    <tbody>
+  <tr>
+<td>LSA</td>
+<td>0.259</td>
+<td>1.000</td>
+<td>0.527</td>
+<td>259</td>
+<td>232</td>
+<td>817328</td>
+<td>741</td>
+<td>0.347</td>
+</tr>
+<tr>
+<td>proportionality</td>
+<td>0.181</td>
+<td>0.999</td>
+<td>0.724</td>
+<td>181</td>
+<td>69</td>
+<td>817491</td>
+<td>819</td>
+<td>0.290</td>
+</tr>
+<tr>
+<td>MIC</td>
+<td>0.168</td>
+<td>1.000</td>
+<td>0.764</td>
+<td>168</td>
+<td>52</td>
+<td>817508</td>
+<td>832</td>
+<td>0.275</td>
+</tr>
+<tr>
+<td>Spearman</td>
+<td>0.251</td>
+<td>0.999</td>
+<td>0.186</td>
+<td>251</td>
+<td>1099</td>
+<td>816461</td>
+<td>749</td>
+<td>0.214</td>
+</tr>
+<tr>
+<td>Sparcc</td>
+<td>0.258</td>
+<td>0.998</td>
+<td>0.150</td>
+<td>258</td>
+<td>1466</td>
+<td>816094</td>
+<td>742</td>
+<td>0.189</td>
+</tr>
+<tr>
+<td>Bray-Curis</td>
+<td>0.053</td>
+<td>0.999</td>
+<td>0.086</td>
+<td>53</td>
+<td>560</td>
+<td>817000</td>
+<td>947</td>
+<td>0.066</td>
+</tr>
+<tr>
+<td>RMT</td>
+<td>0.029</td>
+<td>1.000</td>
+<td>0.091</td>
+<td>29</td>
+<td>288</td>
+<td>817272</td>
+<td>971</td>
+<td>0.044</td>
+</tr>
+<tr>
+<td>CoNET</td>
+<td>0.054</td>
+<td>0.998</td>
+<td>0.029</td>
+<td>54</td>
+<td>1789</td>
+<td>815771</td>
+<td>946</td>
+<td>0.038</td>
+</tr>
+<tr>
+<td>pz</td>
+<td>0.210</td>
+<td>0.973</td>
+<td>0.009</td>
+<td>210</td>
+<td>22166</td>
+<td>795394</td>
+<td>790</td>
+<td>0.018</td>
+</tr>
+    </tbody>
+  </table>
+
+  
+  <div class="ui section divider"></div>
+  <div class="ui top attached inverted segment">
+Table 4. Performance on third ecological dataset of simple one dimensional ecological relationships. The table is adapted from Weiss <i>et al.</i> Row for the proportionality method has been added in the order of f1 value.  </div>
+
+  <table class="ui attached inverted table">
+    <thead>
+      <th>Methods</th>
+      <th>Sensitivity</th>
+      <th>Specificity</th>
+      <th>Precision</th>
+      <th>TP</th>
+      <th>FP</th>
+      <th>TN</th>
+	  <th>FN</th>
+      <th>f1</th>
+    </thead>
+    <tbody>
+<tr>
+<td>lsa</td>
+<td>0.344</td>
+<td>1.000</td>
+<td>0.879</td>
+<td>124</td>
+<td>17</td>
+<td>258463</td>
+<td>236</td>
+<td>0.495</td>
+</tr>
+<tr>
+<td>mic</td>
+<td>0.297</td>
+<td>1.000</td>
+<td>0.892</td>
+<td>107</td>
+<td>13</td>
+<td>258467</td>
+<td>253</td>
+<td>0.446</td>
+</tr>
+<tr>
+<td>sz</td>
+<td>0.578</td>
+<td>0.999</td>
+<td>0.354</td>
+<td>208</td>
+<td>379</td>
+<td>258101</td>
+<td>152</td>
+<td>0.439</td>
+</tr>
+<tr>
+<td>proportionality</td>
+<td>0.281</td>
+<td>0.999</td>
+<td>0.608</td>
+<td>101</td>
+<td>65</td>
+<td>258555</td>
+<td>259</td>
+<td>0.384</td>
+</tr>
+<tr>
+<td>sparcc</td>
+<td>0.469</td>
+<td>0.998</td>
+<td>0.241</td>
+<td>169</td>
+<td>531</td>
+<td>257949</td>
+<td>191</td>
+<td>0.319</td>
+</tr>
+<tr>
+<td>rmt</td>
+<td>0.172</td>
+<td>0.998</td>
+<td>0.127</td>
+<td>62</td>
+<td>427</td>
+<td>258053</td>
+<td>298</td>
+<td>0.146</td>
+</tr>
+<tr>
+<td>bc</td>
+<td>0.094</td>
+<td>0.999</td>
+<td>0.132</td>
+<td>34</td>
+<td>224</td>
+<td>258256</td>
+<td>326</td>
+<td>0.110</td>
+</tr>
+<tr>
+<td>conet</td>
+<td>0.211</td>
+<td>0.994</td>
+<td>0.046</td>
+<td>76</td>
+<td>1562</td>
+<td>256918</td>
+<td>284</td>
+<td>0.076</td>
+</tr>
+<tr>
+<td>pz</td>
+<td>0.353</td>
+<td>0.971</td>
+<td>0.017</td>
+<td>127</td>
+<td>7413</td>
+<td>251067</td>
+<td>233</td>
+<td>0.032</td>
+</tr>
+    </tbody>
+  </table>
+    <div class="ui section divider"></div>
+  <div class="ui top attached inverted segment">
+Table 5. Performance on third ecological dataset of sparse ecological dataset. The table is adapted from Weiss <i>et al.</i> Row for the proportionality method has been added in the order of f1 value.  </div>
+
+  <table class="ui attached inverted table">
+    <thead>
+      <th>Methods</th>
+      <th>Sensitivity</th>
+      <th>Specificity</th>
+      <th>Precision</th>
+      <th>TP</th>
+      <th>FP</th>
+      <th>TN</th>
+	  <th>FN</th>
+      <th>f1</th>
+    </thead>
+    <tbody>
+<tr>
+<td>sparcc</td>
+<td>0.050</td>
+<td>0.998</td>
+<td>0.036</td>
+<td>18</td>
+<td>481</td>
+<td>257999</td>
+<td>342</td>
+<td>0.042</td>
+</tr>
+<tr>
+<td>rmt</td>
+<td>0.025</td>
+<td>0.998</td>
+<td>0.020</td>
+<td>9</td>
+<td>452</td>
+<td>258028</td>
+<td>351</td>
+<td>0.022</td>
+</tr>
+<tr>
+<td>conet</td>
+<td>0.039</td>
+<td>0.996</td>
+<td>0.012</td>
+<td>14</td>
+<td>1132</td>
+<td>257348</td>
+<td>346</td>
+<td>0.019</td>
+</tr>
+<tr>
+<td>pz</td>
+<td>0.136</td>
+<td>0.972</td>
+<td>0.007</td>
+<td>49</td>
+<td>7286</td>
+<td>251194</td>
+<td>311</td>
+<td>0.013</td>
+</tr>
+<tr>
+<td>sz</td>
+<td>0.011</td>
+<td>0.999</td>
+<td>0.011</td>
+<td>4</td>
+<td>367</td>
+<td>258113</td>
+<td>356</td>
+<td>0.011</td>
+</tr>
+<tr>
+<td>bc</td>
+<td>0.000</td>
+<td>0.999</td>
+<td>0.000</td>
+<td>0</td>
+<td>136</td>
+<td>258344</td>
+<td>360</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>lsa</td>
+<td>0.000</td>
+<td>1.000</td>
+<td>0.000</td>
+<td>0</td>
+<td>106</td>
+<td>258374</td>
+<td>360</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>mic</td>
+<td>0.000</td>
+<td>1.000</td>
+<td>0.000</td>
+<td>0</td>
+<td>44</td>
+<td>258436</td>
+<td>360</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>proportionality</td>
+<td>0.000</td>
+<td>0.999</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>15.000</td>
+<td>258465.000</td>
+<td>360.000</td>
+<td>0.000</td>
+</tr>
+    </tbody>
+  </table>
+    <div class="ui section divider"></div>
+  <div class="ui top attached inverted segment">Table 6. Performance on third ecological dataset of sparse and compositional ecological dataset. The table is adapted from Weiss <i>et al.</i> Row for the proportionality method has been added in the order of f1 value. </div>
+
+  <table class="ui attached inverted table">
+    <thead>
+      <th>Methods</th>
+      <th>Sensitivity</th>
+      <th>Specificity</th>
+      <th>Precision</th>
+      <th>TP</th>
+      <th>FP</th>
+      <th>TN</th>
+	  <th>FN</th>
+      <th>f1</th>
+    </thead>
+    <tbody>
+<tr>
+<td>conet</td>
+<td>0.044</td>
+<td>0.997</td>
+<td>0.019</td>
+<td>16</td>
+<td>833</td>
+<td>257647</td>
+<td>344</td>
+<td>0.026</td>
+</tr>
+<tr>
+<td>rmt</td>
+<td>0.017</td>
+<td>0.999</td>
+<td>0.021</td>
+<td>6</td>
+<td>276</td>
+<td>258204</td>
+<td>354</td>
+<td>0.019</td>
+</tr>
+<tr>
+<td>sparcc</td>
+<td>0.022</td>
+<td>0.998</td>
+<td>0.015</td>
+<td>8</td>
+<td>535</td>
+<td>257945</td>
+<td>352</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>pz</td>
+<td>0.133</td>
+<td>0.970</td>
+<td>0.006</td>
+<td>48</td>
+<td>7637</td>
+<td>250843</td>
+<td>312</td>
+<td>0.012</td>
+</tr>
+<tr>
+<td>bc</td>
+<td>0.008</td>
+<td>0.999</td>
+<td>0.012</td>
+<td>3</td>
+<td>251</td>
+<td>258229</td>
+<td>357</td>
+<td>0.010</td>
+</tr>
+<tr>
+<td>sz</td>
+<td>0.008</td>
+<td>0.999</td>
+<td>0.008</td>
+<td>3</td>
+<td>379</td>
+<td>258101</td>
+<td>357</td>
+<td>0.008</td>
+</tr>
+<tr>
+<td>lsa</td>
+<td>0.003</td>
+<td>1.000</td>
+<td>0.011</td>
+<td>1</td>
+<td>94</td>
+<td>258386</td>
+<td>359</td>
+<td>0.004</td>
+</tr>
+<tr>
+<td>mic</td>
+<td>0.000</td>
+<td>1.000</td>
+<td>0.000</td>
+<td>0</td>
+<td>36</td>
+<td>258444</td>
+<td>360</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>proportionality</td>
+<td>0.000</td>
+<td>0.999</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>26.000</td>
+<td>258454.000</td>
+<td>360.000</td>
+<td>0.000</td>
+</tr>
+    </tbody>
+  </table>  
+  <link rel="stylesheet" href="css/aurora-pack.min.css">
+  <link rel="stylesheet" href="css/aurora-theme-base.min.css">
+  <link rel="stylesheet" href="css/urku.css">
+    
+
+      <div class="ae-container-fluid au-pt-4 au-pb-4">
+        <div class="group-buttons"><a href="application.html" class="au-mt-2 arrow-button arrow-button--right">Next: Results and Discussion - Application<span class="arrow-cont">
+              <svg>
+                <use xlink:href="img/symbols.svg#arrow"></use>
+              </svg></span></a></div>
+      </div>
+    </section>
+    <footer class="ae-container-fluid rk-footer ">
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+          <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">yk1615@ic.ac.uk </a></span></p>
+          <p class="rk-footer__text rk-footer__by"><span class="ae-u-bolder">Yunsoo Kim, June 2016<span></p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+  </body>
+</html>
