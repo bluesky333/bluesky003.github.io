@@ -307,4 +307,5 @@
 }
 @media (max-width: 360px) {
     .sec2 .right h2 {padding: 0;}
+    .sec2 .skill .ability .progress-title {font-size: 16px;}
 } 
